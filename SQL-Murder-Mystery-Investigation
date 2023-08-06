@@ -15,7 +15,7 @@ Start by retrieving the corresponding crime scene report from the police departm
 
 1) Analyze Crime Scene Report based on murders that occurred on January 15 2018 and took place in SQL City
 
-----Approach:
+Approach:
 select *
 from crime_scene_report
 where date = 20180115 and city like '%SQL City%'
@@ -27,18 +27,19 @@ Displayed Results:
 
 2) Analyze person table to find the witnesses living at the last house on Northwestern Dr and the second witness named Annabel
 
-----First Witness Approach:
+First Witness Approach:
 select * 
 from person
 where address_street_name like '%Northwestern Dr%'
 order by address_number desc;
 
-----2nd Witness Approach::
+2nd Witness Approach::
 select * 
 from person
 where name like '%Annabel%' and address_street_name like '%Franklin Ave%'
 
 Displayed Results: 
+
 Witness 1:
 14887	Morty Schapiro	118009	4919	Northwestern Dr	111564949
 
@@ -47,14 +48,14 @@ Witness 2:
 
 3) Look at the interview table and use the get_fit_now_member person_id to link with the inteview's person id
 
-----Witness 1 Approach:
+Witness 1 Approach:
 select *
 from person a
 join interview b
 on a.id = b.person_id
 where a.name like '%Morty%'
 
-----Witness 2 Approach: 
+Witness 2 Approach: 
 select *
 from get_fit_now_member a
 join interview b
@@ -72,7 +73,7 @@ Witness 2 (Annabel Miller):
 4) locate the "get_fit_now" gym members who went to the gym on Jaunary 9 2018, has a gold status membership, membership id starts with 
 "48Z".
 
------Approach:
+Approach:
 select *
 from get_fit_now_member a
 join get_fit_now_check_in b
@@ -86,7 +87,7 @@ Displayed Results:
 
 5) Find the owner of the vehicle that the UNSUB got into
 
------Approach:
+Approach:
 select 
 a.name,
 a.license_id,
@@ -103,7 +104,7 @@ Maxine Whitely	183779	H42W0X <----- starts with H42W
 
 6) find information about maxine whitely, joe germuska, and jeremy bowers
 
-----Approach:
+Approach:
 Maxine Whitely query:
 SELECT *
 FROM person a
@@ -140,7 +141,7 @@ Congrats, you found the murderer! But wait, there's more... If you think you're 
 
 7) Find the mastermind behind the murder.
 
-----Approach: 
+Approach: 
 SELECT *
 FROM person a
 JOIN drivers_license b ON a.license_id = b.id
