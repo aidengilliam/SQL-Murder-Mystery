@@ -116,9 +116,18 @@ JOIN interview b ON a.id = b.person_id
 join drivers_license c on a.license_id = c.id
 where a.name like '%Maxine Whitely%' 
 
-
 results:
 No result (no interview was made)
+
+
+Tushar Query:
+SELECT *
+FROM person a
+JOIN interview b ON a.id = b.person_id
+join drivers_license c on a.license_id = c.id
+where a.name like '%Tushar%'
+results:
+No results (No interview was conducted)
 
 
 Jeremy Bowers query: 
@@ -128,26 +137,14 @@ JOIN interview b ON a.id = b.person_id
 join drivers_license c on a.license_id = c.id
 where a.name like '%Jeremy Bowers%'
 
-
 results:
 67318	Jeremy Bowers	423327	530	Washington Pl, Apt 3A	871539279	67318	I was hired by a woman with a lot of money. I don't know her name but I know she's around 5'5" (65") or 5'7" (67"). She has red hair and she drives a Tesla Model S. I know that she attended the SQL Symphony Concert 3 times in December 2017.	423327	30	70	brown	brown	male	0H42W2	Chevrolet	Spark LS
 
-
+Game Prompt:
 Congrats, you found the murderer! But wait, there's more... If you think you're up for a challenge, try querying the interview transcript of the murderer to find the real villain behind this crime. If you feel especially confident in your SQL skills, try to complete this final step with no more than 2 queries. Use this same INSERT statement with your new suspect to check your answer.
 
 
-Tushar Query:
-SELECT *
-FROM person a
-JOIN interview b ON a.id = b.person_id
-join drivers_license c on a.license_id = c.id
-where a.name like '%Tushar%'
-
-results:
-No results (No interview was conducted)
-
-7) Find the red hair woman Behind all of this
-
+7) Find the red hair woman mastermind behind the murder
 
 query: 
 SELECT *
@@ -158,13 +155,10 @@ join income d on a.ssn = d.ssn
 where b.gender like '%female%' and b.car_make like '%Tesla%' and b.hair_color like '%red%'
 order by d.annual_income desc;
 
-
-
 Result: 
 99716	Miranda Priestly	202298	1883	Golden Ave	987756388	202298	68	66	green	red	female	500123	Tesla	Model S	99716	1143	SQL Symphony Concert	20171206	987756388	310000
 99716	Miranda Priestly	202298	1883	Golden Ave	987756388	202298	68	66	green	red	female	500123	Tesla	Model S	99716	1143	SQL Symphony Concert	20171212	987756388	310000
 99716	Miranda Priestly	202298	1883	Golden Ave	987756388	202298	68	66	green	red	female	500123	Tesla	Model S	99716	1143	SQL Symphony Concert	20171229	987756388	310000
 
-
-
+Game Prompt:
 Congrats, you found the brains behind the murder! Everyone in SQL City hails you as the greatest SQL detective of all time. Time to break out the champagne!
