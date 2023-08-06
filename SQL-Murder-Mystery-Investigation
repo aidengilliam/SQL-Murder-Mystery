@@ -25,7 +25,7 @@ Displayed Results:
 
 
 
-2) Analyze person table to find the witnesses living at the last house on Northwestern Dr and the second witness named Annabel
+2) Querying the person table to identiy witnesses #1 living at the last house on Northwestern Dr. and witness #2 named Annabel.
 
 First Witness Approach:
 select * 
@@ -46,7 +46,7 @@ Witness 1:
 Witness 2:
 16371	Annabel Miller	490173	103	Franklin Ave	318771143
 
-3) Look at the interview table and use the get_fit_now_member person_id to link with the inteview's person id
+3) Examine the interview table and use the get_fit_now_member person_id to link with the inteview's person id
 
 Witness 1 Approach:
 select *
