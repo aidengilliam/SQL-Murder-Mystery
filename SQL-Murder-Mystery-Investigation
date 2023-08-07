@@ -46,7 +46,7 @@ Witness 1:
 Witness 2:
 16371	Annabel Miller	490173	103	Franklin Ave	318771143
 
-3) Examine the interview table and use the get_fit_now_member person_id to link with the inteview's person id
+3) Examine the interview table and use the get_fit_now_member person_id to link with the interview's person id
 
 Witness 1 Approach:
 select *
@@ -70,8 +70,7 @@ Witness 2 (Annabel Miller):
 90081 16371	Annabel Miller	20160208	gold 16371	I saw the murder happen, and I recognized the killer from my gym when I was working out last week on January the 9th.
 
 
-4) locate the "get_fit_now" gym members who went to the gym on Jaunary 9 2018, has a gold status membership, membership id starts with 
-"48Z".
+4) Locate the "get_fit_now" gym members who went to the gym on Jaunary 9 2018, has a gold status membership, and the membership id starts with "48Z".
 
 Approach:
 select *
@@ -85,7 +84,7 @@ Displayed Results:
 48Z55	67318	Jeremy Bowers	20160101	gold	48Z55	20180109	1530	1700
 
 
-5) Find the owner of the vehicle that the UNSUB got into
+5) Find the license plate registered owner of the vehicle that the murder witness claimed the murderer got into.
 
 Approach:
 select 
@@ -99,10 +98,10 @@ where B.plate_number like '%H42W%'
 
 Displayed Results:
 Tushar Chandra	664760	4H42WR
-Jeremy Bowers	423327	0H42W2
-Maxine Whitely	183779	H42W0X <----- starts with H42W
+Jeremy Bowers	423327	0H42W2 <----Closest License Plate Match
+Maxine Whitely	183779	H42W0X
 
-6) find information about maxine whitely, joe germuska, and jeremy bowers
+6) Gather information on Maxine Whitely, Joe Germuska, and Jeremy Bowers (owners with a vehicle license plate that contains "H42W2")
 
 Approach:
 Maxine Whitely query:
